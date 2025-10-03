@@ -9,7 +9,7 @@ st.title("Know what is the Air Quality in your city before ou go out ")
 
 st.write("Get ahead of air pollution with our prediction for your city's Air Quality Index")
 
-st.image("C:/Users/pc/Desktop/air-pollution-in-urban-area.tmb-1200v.jpg",caption ="Predict AQI",use_column_width=True)
+st.image("air-pollution-in-urban-area.tmb-1200v.jpg",caption ="Predict AQI",use_column_width=True)
 
 def make_prediction(model,feature_set):
     y_predict=model.predict(feature_set)
@@ -18,12 +18,12 @@ def make_prediction(model,feature_set):
     
 path = 'C:/Users/pc/Desktop/AQI Project' 
 
-mreg= pickle.load(open(os.path.join(path,"C:/Users/pc/Desktop/AQI Project/Models/Multiple Regression.pkl"),'rb'))
-preg= pickle.load(open(os.path.join(path,"C:/Users/pc/Desktop/AQI Project/Models/pregression.pkl"),'rb'))
-dec_tree= pickle.load(open(os.path.join(path,"C:/Users/pc/Desktop/AQI Project/Models/Decision Tree.pkl"),'rb'))
-rt_reg= pickle.load(open(os.path.join(path,"C:/Users/pc/Desktop/AQI Project/Models/Random Forest.pkl"),'rb'))
-svr_reg= pickle.load(open(os.path.join(path,"C:/Users/pc/Desktop/AQI Project/Models/svrression.pkl"),'rb'))
-poly_reg= pickle.load(open(os.path.join(path,"C:/Users/pc/Desktop/AQI Project/Models/poly_reg.pkl"),'rb'))
+mreg= pickle.load(open(os.path.join(path,"Models/Multiple Regression.pkl"),'rb'))
+preg= pickle.load(open(os.path.join(path,"Models/pregression.pkl"),'rb'))
+dec_tree= pickle.load(open(os.path.join(path,"Models/Decision Tree.pkl"),'rb'))
+rt_reg= pickle.load(open(os.path.join(path,"Random Forest.pkl"),'rb'))
+svr_reg= pickle.load(open(os.path.join(path,"svrression.pkl"),'rb'))
+poly_reg= pickle.load(open(os.path.join(path,"Models/poly_reg.pkl"),'rb'))
 
 cities = ["Ahmedabad","Mumbai","Delhi","Chennai","Banglore"]
 selected_city=st.selectbox("Select City:",cities)
@@ -68,4 +68,5 @@ if predict_button:
     elif selected_model == "SVR":
         y_predict = make_prediction(svr_reg,feature_set)
     
+
     st.write(f"*The Predicted AQI  for{selected_city} is **{y_predict}**,*")
