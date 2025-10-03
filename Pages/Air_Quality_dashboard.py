@@ -5,7 +5,7 @@ import matplotlib.pyplot as plt
 
 #Load the dataset 
 
-data=pd.read_csv("C:/Users/pc/Desktop/AQI Project/Dataset for AQI/city_day.csv")
+data=pd.read_csv("AQI Project/Dataset for AQI/city_day.csv")
 
 #Set page title 
 st.set_page_config(page_title='Air Quality Dashboard')
@@ -109,4 +109,5 @@ if display_pollutants_over_time:
     st.write('The graph shows the level of selected Pollutantss over time for the selected city ')
     st.write('It allows monitoring the trends and patterns of Pollutants levels')
     st.write('Higher Pollutant level indicates the worst quality of Air.')
+
     st.write('The Graph help identify any seasonal or long term variations in pollutant level.')
