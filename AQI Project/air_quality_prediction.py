@@ -14,7 +14,7 @@ from sklearn.preprocessing import OneHotEncoder
 
 """Load CSV"""
 
-df=pd.read_csv("C:/Users/pc/Downloads/archive (1)/city_day.csv")
+df=pd.read_csv("city_day.csv")
 
 df.head(5)
 
