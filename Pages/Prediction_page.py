@@ -45,7 +45,7 @@ if predict_button:
     user_df = pd.DataFrame([user_data])
 
     #Load the OneHotEncoder
-    ohe= pickle.load(open(r"C:/Users/pc/Desktop/AQI Project/Models/OneHotEncoder_Featureset.pkl","rb"))
+    ohe= pickle.load(open("OneHotEncoder_Featureset.pkl","rb"))
     
     #Transform the user data(assuming the first column is "State")
     try:
@@ -70,3 +70,4 @@ if predict_button:
     
 
     st.write(f"*The Predicted AQI  for{selected_city} is **{y_predict}**,*")
+
