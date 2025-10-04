@@ -2,7 +2,7 @@ import streamlit as st
 st.set_page_config(page_title="Air Qualtiy Index:")
 st.header('AirWatch India')
 
-st.image("C:/Users/pc/Desktop/download.png")
+st.image("download.png")
 
 st.markdown("""
 This app shows you the air pollution levels in Indian Cities.  
@@ -38,4 +38,5 @@ st.markdown(
              """
              Our Health ratio is directly dependent on the Air Qualtiy 
              """
+
 )
